@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="../js/model/Subjects.js"></script>
+    <script defer src="../js/methods/addSubjects.js"></script>
+    <script defer src="../js/methods/loadSubjects.js"></script>
+    <script defer src="../js/pages_js/leftbar_menu/menu.js"></script>
+    <script defer src="../js/pages_js/leftbar_menu/callIframe.js"></script>
+    <script defer src="../js/transitions/goNext.js"></script>
+    <script defer src="../js/transitions/goBack.js"></script>
+    <script defer src="../js/transitions/loadAnimation.js"></script>
+    <title>Open Source</title>
+</head>
+<body class="flexbox_container hidden_element">
+    <main id="leftbar_menu_container">
+        <aside>
+            <section class="first_section_leftbar">
+                <a href="./welcome_template.html" target="_parent"><img src="../img/Tools.svg" class="logo_type" alt="logo"></a>
+            </section>
+
+            <section class="second_section_leftbar">
+                <h4>SELECIONE OU PROCURE POR ALGUM ITEM</h4>
+                <nav class="nav_links">
+                    <ul></ul>
+                </nav>
+            </section>
+
+            <section class="thirty_section_leftbar">
+                <h2>COPYRIGHT @ MAURICIO | FREE OPEN SOURCE</h2>
+                <ul>
+                    <li><a href="https://codepen.io/maumuller" class="social_media codepen_link" target="_blank"><i class="fa-brands fa-codepen"></i> CODEPEN</a></li>|
+                    <li><a href="https://github.com/maumuller" class="social_media github_link" target="_blank"><i class="fa-brands fa-github"></i> GITHUB</a></li>|
+                    <li><a href="https://www.linkedin.com/in/mauricio-m-s/" class="social_media linkedin_link" target="_blank"><i class="fa-brands fa-linkedin"></i> LINKEDIN</a></li>
+                    <li><a href="#" class="social_media portifolio_link" target="_blank"><i class="fa-solid fa-image-portrait" target="_blank"></i> PORTIFÓLIO</a></li>
+                </ul>
+            </section>
+        </aside>
+
+        <iframe src="./welcome_template.html" class="iframe_menubar" frameborder="0"></iframe>
+    </main>
+
+    <section class="menu_rightbar">
+
+        <div class="menu_button" title="Menu">
+            <li></li>
+            <li></li>
+            <li></li>
+        </div>
+
+        <ul class="list_buttons">
+            <li class="hidden_element" title="Entre Em Contato"><i class="fa-solid fa-comments"></i></li>
+            <li class="hidden_element" title="Escolha Assunto"><a class="links_goback button_menu" href="../index.html"><i class="fa-solid fa-bars"></i></a></li>
+            <li class="hidden_element" title="Pesquise por algum item"><i class="fa-solid fa-magnifying-glass"></i></li>
+        </ul>
+
+    </section>
+    
+</body>
+</html>

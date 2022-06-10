@@ -1,0 +1,21 @@
+//IMPORT VARIABLES
+@import './variables/colors/colors.scss';
+@import './variables/fonts-class/fonts.scss';
+@import './variables/font-sizes/font-sizes.scss';
+
+//IMPORT MIXINS
+@import './mixins/mixins.scss';
+
+//IMPORT GLOBAL CLASSES
+@import './global_classes/global.scss';
+
+//IMPORT UNIQUE CLASSES
+@import './unique_classes/main_page.scss';
+@import './unique_classes/leftbar_menu.scss';
+
+//IMPORT KEYFRAMES
+@import './keyframes/keyframes.scss';
+
+//IMPORT RESPONSIVE CLASSES
+@import './responsive/main_page.scss';
+@import './responsive/leftbar_menu.scss';

@@ -1,0 +1,31 @@
+@keyframes goNext{
+    0%{ transform: translateY(0px); }
+    100%{ transform: translateY(-1200px); }
+}
+
+@keyframes loadAnimationNext{
+    0%{ transform: translateY(1200px); }
+    100%{ transform: translateY(0); }
+}
+
+@keyframes goBack{
+    0%{ transform: translateY(0px); }
+    100%{ transform: translateY(1200px); }
+}
+
+@keyframes loadAnimationBack{
+    0%{ transform: translateY(-1200px); }
+    100%{ transform: translateY(0); }
+}
+
+@keyframes visibleItems {
+    0%{ width: 0; }
+    50%{ width: 100%; }
+    100% { width: 80%; }
+}
+
+@keyframes hiddenItems {
+    0%{ width: 80%; opacity: 1; z-index: 50;}
+    50%{ width: 100%;}
+    100% { width: 0; opacity: 0; z-index: -1;}
+}

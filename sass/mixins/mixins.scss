@@ -1,0 +1,26 @@
+@mixin defaultText($color, $middle-font-size, $font-weight, $background-color) {
+    color: $color;
+    font-size: $middle-font-size;
+    font-weight: $font-weight;
+    background-color: $background-color;
+}
+
+@mixin displayMode($display, $flex-direction, $align-items, $justify-content, $gap) {
+    display: $display;
+    flex-direction: $flex-direction;
+    align-items: $align-items;
+    justify-content: $justify-content;
+    gap: $gap;
+}
+
+@mixin positionDiv($position, $left, $right, $top, $bottom) {
+    position: $position;
+    left: $left;
+    right: $right;
+    top: $top;
+    bottom: $bottom;
+}
+
+@mixin lineDiv($border){
+    border: 2px solid $border;
+}

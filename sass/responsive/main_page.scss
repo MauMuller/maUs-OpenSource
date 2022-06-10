@@ -1,0 +1,123 @@
+@media (min-width: 1700px){
+    #main_page .box_part {
+        .first_part img{ max-width: 800px; }
+
+        .last_part{
+            article{
+                h2{ font-size: $big-font-size; }
+                h3{ font-size: $smaller-font-size; width: 60%; }
+            }
+
+            ul .items p{
+                font-size: $smaller-font-size;
+            }
+
+            .footer_main{
+                
+                p, ul li a i{
+                    font-size: $smallest-font-size;
+                    span{font-size: $smallest-font-size; }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1000px){
+    #main_page .box_part {
+        .first_part img{ max-width: 250px; }
+
+        .last_part{
+            article{
+                h2{ font-size: $small-font-size; }
+                h3{ font-size: $ex-small-size-1; width: 60%; }
+            }
+
+            ul .items p{
+                font-size: $ex-small-size-1;
+            }
+
+            .footer_main{
+                
+                p, ul li a i{
+                    font-size: $ex-small-size-1;
+                    span{font-size: $ex-small-size-1; }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 700px){
+    #main_page .box_part {
+        .first_part img{ min-width: 250px; }
+
+        .last_part{
+            article{
+                h2{ font-size: $smaller-font-size; }
+                h3{ width: 70%; }
+            }
+
+            ul .items{
+                width: 100%;
+
+                p{ font-size: $ex-small-size-1; }
+            } 
+        }
+    }
+}
+
+@media (max-width: 500px){
+    #main_page .box_part {
+        width: 90%;
+
+        .first_part{
+            text-align: center;
+
+            img{ min-width: 200px; }
+        } 
+
+        .last_part{
+            align-items: center;
+            gap: 1.5em;
+
+            article{
+                width: 80%;
+                text-align: center;
+
+                h2{ font-size: $smallest-font-size; }
+                h3{ font-size: $ex-small-size-2; padding: 5px; width: 100%;}
+            }
+
+            ul{
+                gap: 10px;
+
+                .items{
+                    flex-direction: column;
+
+                    p{
+                        font-size: $ex-small-size-2;
+                        padding: 5px;
+                        text-align: center;
+                    }
+                } 
+            }
+
+            .footer_main{
+                gap:0;
+
+                p{
+                    font-size: $ex-small-size-2;
+                    span{font-size: $ex-small-size-2; }
+                }
+                ul{
+                    justify-content: center;
+
+                    li a i{
+                        font-size: $ex-small-size-1;
+                    }
+                }
+            }
+        }
+    }
+}

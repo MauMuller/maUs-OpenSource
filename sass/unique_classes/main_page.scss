@@ -1,0 +1,119 @@
+//ANIMATIONS
+#main_page{
+    user-select: none;
+    // @include lineDiv(blue);
+    height: 100vh;
+    @include displayMode(flex, column, center, center, 10px);
+
+    .box_part{
+        z-index: 50;
+        @include displayMode(flex, column, center, center, 10px);
+        // @include lineDiv(green);
+        width: 50%;
+
+        .part{
+            width: 100%;
+        }
+    
+        .first_part{
+            // @include lineDiv(blue);
+            // text-align: center;
+
+            img{
+                width: 80%;
+                max-width: 500px;
+                min-width: 100px;
+            }
+
+        } 
+
+        .last_part{
+            // @include lineDiv(blue);
+            @include displayMode(flex, column, flex-start, center, 3em);
+
+            article{
+                h2{
+                    @include defaultText($primary-black-color, $middle-font-size, 800, transparent);
+                    text-transform: uppercase;
+                }
+
+                h3{
+                    @include defaultText($primary-white-color, $ex-small-size-1, 100, $primary-black-color);
+                    padding: 8px;
+                    width: 50%;
+                    text-align: center;
+                    border-radius: 5px;
+                }
+            }
+
+            .list_of_items{
+                width: 80%;
+                // @include lineDiv(blue);
+            }
+
+            // .list_of_items::-webkit-scrollbar{
+            //     width: 5px;
+            // }
+
+            // .list_of_items::-webkit-scrollbar-thumb{
+            //     background-color: $secondary-white-color;
+            //     border-radius: 10px;
+            // }
+
+            .moreItens{
+                height: 200px;
+                overflow-y: auto;
+                padding: 10px;
+            }
+
+            ul{
+                // @include lineDiv(blue);
+                @include displayMode(flex, row, center, left, 1.5em);
+                flex-wrap: wrap;
+                width: 100%;
+
+                .items{
+                    @include displayMode(flex, none, none, none, 0);
+                    // @include lineDiv(red);
+                    padding: 10px;
+                    width: 45%;
+
+                    a{
+                        width: 100%;
+                        font-family: 'Asap';
+                        @include defaultText($primary-white-color, $smallest-font-size, 100, $primary-black-color);
+                        border-radius: 20px;
+                        padding: 10px;
+                        cursor: pointer;
+                        transition: 500ms ease;
+                        z-index: 60;
+                        box-shadow: 2px 2px 0.75em $primary-black-color;
+
+
+                        &:hover{
+                            transform: scale(1.05);
+                            transition: 500ms ease;
+                            box-shadow: -2px -2px 0.75em $primary-black-color;
+                        }
+                    }
+
+                    .first_item{
+                        background-color: $primary-red-color;
+                    }
+                    .second_item{
+                        background-color: $primary-blue-color;
+                    }
+                }
+            }
+
+            .footer_main{
+                // @include lineDiv(yellow);
+                @include displayMode(flex, column, center, left, 1em);
+                font-weight: 600;
+
+                span{ @include defaultText($secondary-red-color, $ex-small-size-1, 800, transparent); }
+                ul a{ @include defaultText($primary-black-color, $smallest-font-size, 100, transparent); }
+            }
+        }
+    }
+}

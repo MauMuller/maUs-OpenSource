@@ -1,0 +1,176 @@
+#leftbar_menu_container{
+    // @include lineDiv(red);
+    @include displayMode(flex, row, center, center, 1px);
+    @include positionDiv(fixed, 0, 0, 0, 0);
+    user-select: none;
+    height: 100vh;
+
+    .heightMax{ height: 100% };
+
+    aside{
+        // border-right: 1px solid $secondary-white-color;
+        @include displayMode(flex, column, NONE, center, 1em);
+        @extend .heightMax;
+        width: 25%;
+        background-color: $primary-black-color;
+        box-shadow: 3px 0px 0.75em $secondary-black-color;
+        padding: 10px;
+        overflow-x: hidden;
+
+        .sections_leftbar{ @include displayMode(flex, column, none, center, 1px) }
+
+        .first_section_leftbar{
+            // @include lineDiv(blue);
+            @extend .sections_leftbar;
+            // padding: 5px;
+
+            a{
+                // @include lineDiv(green);
+                text-align: left;
+
+                img{
+                    max-width: 500px;
+                    min-width: 100px;
+                    text-align: left;
+                }
+            } 
+        }
+
+        .second_section_leftbar{
+            @extend .sections_leftbar;
+            @include defaultText($primary-white-color, $ex-small-size-1, 400, transparent);
+
+            .nav_links{
+                // padding: 10px;
+                margin-top: 5px;
+                height: 520px;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                border-top: 1px solid $thirty-white-color;
+                border-bottom: 1px solid $thirty-white-color;
+                overflow-y: auto;
+
+                ul{
+                    @include displayMode(flex, column, flex-start, flex-start, 10px);
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+
+                    li{
+                        // @include lineDiv(blue);
+                        width: 90%;
+                        border-radius: 5px;
+                        transition: 200ms ease;
+
+                        a{
+                            width: 100%;
+                            padding: 2px;
+                            @include displayMode(flex, row, center, flex-start, 1px);
+                            color: $secondary-white-color;
+                            font-family: 'Acme';
+                            text-transform: uppercase;
+                            letter-spacing: 1px;
+                        }
+
+                        &:hover{
+                            transition: 200ms ease;
+                            transform: translate(10px);
+                            box-shadow: 2px 2px 0.75em $secondary-black-color;
+                            background-color: $thirty-black-color;
+                        }
+                    }
+                }
+            }
+        }
+
+        .thirty_section_leftbar{
+            // @include lineDiv(blue);
+            @extend .sections_leftbar;
+            @include defaultText($primary-white-color, $ex-small-size-1, 200, transparent);
+
+            h2{
+                font-size: $ex-small-size-1;
+                text-align: center;
+                margin-bottom: 10px;
+                font-weight: 200;
+            }
+            ul{
+                .social_media{ transition: 200ms ease-in; filter: sepia(100%);}
+                .social_media:hover{ filter: grayscale(0); transition: 200ms ease-out; }
+
+                @include displayMode(flex, none, center, center, 1em);
+                flex-wrap: wrap;
+
+                a{ font-family: 'Asap'; font-size: $ex-small-size-1}
+            }
+        }
+    }
+
+    iframe{
+        // @include lineDiv(blue);
+        @extend .heightMax;
+        width: 75%;
+    }
+}
+
+.menu_rightbar{
+    @include positionDiv(fixed, auto, 0, 0, 0);
+    @include displayMode(flex, column-reverse, center, flex-start, 10px);
+    // border: 1px solid blue;
+    width: 7%;
+    height: 100vh;
+    padding: 10px;
+
+    .menu_button{
+        @include displayMode(flex, column, flex-end, center, 5px);
+        // @include lineDiv(red);
+        width: 65px;
+        height: 50px;
+        padding: 5px;
+        border-radius: 10px;
+        background-color: $thirty-black-color;
+        box-shadow: 3px 3px 5px $primary-black-color;
+        cursor: pointer;
+    
+        li{ 
+            background-color: $secondary-white-color;
+            height: 6px;
+            border-radius: 10px;
+    
+            &:nth-child(1){
+                width: 100%;
+            }
+            &:nth-child(2){
+                width: 70%;
+            }
+            &:nth-child(3){
+                width: 40%;
+            }
+        }
+        
+        &:hover{
+            box-shadow: -1px -1px 5px $primary-black-color;
+        }
+    }
+
+    .list_buttons{
+        @include displayMode(flex, column, center, flex-end, 10px);
+        // @include lineDiv(green);
+        height: 85%;
+        width: 100%;
+
+        li{
+            @include displayMode(flex, column, center, center, 0);
+            @extend .menu_button;
+            @extend .icons_menu;
+            border-radius: 15%;
+            padding: 5px;
+            width: 70%;
+
+            .button_menu{
+                @include displayMode(flex, auto, center, center, 0);
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
