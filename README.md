@@ -1,3 +1,3 @@
-# ![Principalmaus_logo_small](https://user-images.githubusercontent.com/82516932/175757755-7c6e1611-7385-4b86-ad59-1175f2090109.png) OpenSource
+# ![Group 2img_complete (1)](https://user-images.githubusercontent.com/82516932/175758029-cb403a2d-122c-4e79-8231-c31f7706915b.png)
 EM BREVE... 
 ![Principalmaus_logo](https://user-images.githubusercontent.com/82516932/175757371-fa3fb354-18b5-4734-b147-096c03963cfd.png)
