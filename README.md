@@ -1,3 +1,2 @@
-# ![Group 2img_complete (1)](https://user-images.githubusercontent.com/82516932/175758029-cb403a2d-122c-4e79-8231-c31f7706915b.png)
+# ![logo](https://user-images.githubusercontent.com/82516932/175792514-ce3e405a-f248-4f20-8051-86a7834cf989.png)
 EM BREVE... 
-![Principalmaus_logo](https://user-images.githubusercontent.com/82516932/175757371-fa3fb354-18b5-4734-b147-096c03963cfd.png)
