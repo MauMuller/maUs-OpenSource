@@ -2,8 +2,6 @@ const logoType = document.querySelector('img.logo_type');
 const navegationList = document.querySelector('nav.nav_links ul');
 const subjectObj = JSON.parse(localStorage.getItem('subjectObj'));
 
-// logoType.setAttribute('src',subjectObj)
-
 loadingInformations(subjectObj.title);
 
 function loadingInformations(type){
@@ -26,6 +24,7 @@ function settingLogotype(srcLogo){
 
 function settingAnchorList(arrAnchor){
     arrAnchor.forEach(objLink=>{
-        navegationList.innerHTML += `<li><a href="${objLink.href}" class="anchorsSubject">${objLink.text}</a></li>`;
+        console.log(objLink.icon);
+        navegationList.innerHTML += `<li><a href="${objLink.href}" class="anchorsSubject" title="${objLink.text}">${objLink.icon} ${objLink.text}</a></li>`;
     });
 }

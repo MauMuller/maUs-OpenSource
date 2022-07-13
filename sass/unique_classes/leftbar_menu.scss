@@ -1,114 +1,147 @@
 #leftbar_menu_container{
     // @include lineDiv(red);
-    @include displayMode(flex, row, center, center, 1px);
+    @include displayMode(flex, row, center, flex-start, 1px);
     @include positionDiv(fixed, 0, 0, 0, 0);
     user-select: none;
     height: 100vh;
 
-    .heightMax{ height: 100% };
+    .heightMax{ height: 100% }
+    .w-75perc{ width: 75%; }
+    .w-90perc{ width: 90%; }
 
-    aside{
-        // border-right: 1px solid $secondary-white-color;
-        @include displayMode(flex, column, NONE, center, 1em);
-        @extend .heightMax;
-        width: 25%;
-        background-color: $primary-black-color;
-        box-shadow: 3px 0px 0.75em $secondary-black-color;
-        padding: 10px;
-        overflow-x: hidden;
+    .translateSlimMenu{ animation: 500ms ease translateSlimMenu forwards};
+    .translateDefaultMenu{ animation: 500ms ease translateDefaultMenu forwards};
 
-        .sections_leftbar{ @include displayMode(flex, column, none, center, 1px) }
+    .slinner_menu{ width: 10%; }
+    .default_menu{ width: 35%; }
 
-        .first_section_leftbar{
-            // @include lineDiv(blue);
-            @extend .sections_leftbar;
-            // padding: 5px;
+    .container_itens{
+        // @include lineDiv(green);
+        @include displayMode(flex, row, flex-start, flex-start, 0);
 
-            a{
-                // @include lineDiv(green);
-                text-align: left;
-
-                img{
-                    max-width: 500px;
-                    min-width: 100px;
+        .menu_itens{
+            width: 90%;
+            // @include lineDiv(red);
+            @include displayMode(flex, column, inherit, flex-start, 1em);
+            @extend .heightMax;
+            height: 100vh;
+            background-color: $primary-black-color;
+            box-shadow: 3px 0px 0.75em $secondary-black-color;
+            padding: 10px;
+            overflow-x: hidden;
+    
+            .sections_leftbar{ @include displayMode(flex, column, none, center, 1px) }
+    
+            .first_section_leftbar{
+                // @include lineDiv(blue);
+                @extend .sections_leftbar;
+                // padding: 5px;
+    
+                a{
+                    // @include lineDiv(green);
                     text-align: left;
-                }
-            } 
-        }
-
-        .second_section_leftbar{
-            @extend .sections_leftbar;
-            @include defaultText($primary-white-color, $ex-small-size-1, 400, transparent);
-
-            .nav_links{
-                // padding: 10px;
-                margin-top: 5px;
-                height: 520px;
-                padding-top: 5px;
-                padding-bottom: 5px;
-                border-top: 1px solid $thirty-white-color;
-                border-bottom: 1px solid $thirty-white-color;
-                overflow-y: auto;
-
-                ul{
-                    @include displayMode(flex, column, flex-start, flex-start, 10px);
-                    padding-top: 10px;
-                    padding-bottom: 10px;
-
-                    li{
-                        // @include lineDiv(blue);
-                        width: 90%;
-                        border-radius: 5px;
-                        transition: 200ms ease;
-
-                        a{
-                            width: 100%;
-                            padding: 2px;
-                            @include displayMode(flex, row, center, flex-start, 1px);
-                            color: $secondary-white-color;
-                            font-family: 'Acme';
-                            text-transform: uppercase;
-                            letter-spacing: 1px;
-                        }
-
-                        &:hover{
+    
+                    img{
+                        max-width: 500px;
+                        min-width: 100px;
+                        text-align: left;
+                    }
+                } 
+            }
+    
+            .second_section_leftbar{
+                width: 100%;
+                @extend .sections_leftbar;
+                @include defaultText($primary-white-color, $ex-small-size-1, 400, transparent);
+    
+                .nav_links{
+                    overflow-x: hidden;
+                    margin-top: 5px;
+                    height: 520px;
+                    padding-top: 5px;
+                    padding-bottom: 5px;
+                    border-top: 1px solid $thirty-white-color;
+                    border-bottom: 1px solid $thirty-white-color;
+                    overflow-y: auto;
+    
+                    ul{
+                        @include displayMode(flex, column, flex-start, flex-start, 10px);
+                        padding-top: 10px;
+                        padding-bottom: 10px;
+    
+                        li{
+                            // @include lineDiv(blue);
+                            width: 90%;
+                            border-radius: 5px;
                             transition: 200ms ease;
-                            transform: translate(10px);
-                            box-shadow: 2px 2px 0.75em $secondary-black-color;
-                            background-color: $thirty-black-color;
+    
+                            a{
+                                width: 100%;
+                                padding: 2px;
+                                @include displayMode(flex, row, center, flex-start, 1px);
+                                color: $secondary-white-color;
+                                font-family: 'Acme';
+                                text-transform: uppercase;
+                                letter-spacing: 1px;
+                            }
+    
+                            &:hover{
+                                transition: 200ms ease;
+                                transform: translate(10px);
+                                box-shadow: 2px 2px 0.75em $secondary-black-color;
+                                background-color: $thirty-black-color;
+                            }
                         }
                     }
                 }
             }
+    
+            .thirty_section_leftbar{
+                // @include lineDiv(blue);
+                @extend .sections_leftbar;
+                @include defaultText($primary-white-color, $ex-small-size-1, 200, transparent);
+    
+                h2{
+                    font-size: $ex-small-size-1;
+                    text-align: center;
+                    margin-bottom: 10px;
+                    font-weight: 200;
+                }
+                ul{
+                    .social_media{ transition: 200ms ease-in; filter: sepia(100%);}
+                    .social_media:hover{ filter: grayscale(0); transition: 200ms ease-out; }
+    
+                    @include displayMode(flex, none, center, center, 1em);
+                    flex-wrap: wrap;
+    
+                    a{ font-family: 'Asap'; font-size: $ex-small-size-1}
+                }
+            }
         }
 
-        .thirty_section_leftbar{
-            // @include lineDiv(blue);
-            @extend .sections_leftbar;
-            @include defaultText($primary-white-color, $ex-small-size-1, 200, transparent);
+        .slim_menu{
+            // @include lineDiv(yellow);
+            @include displayMode(flex, row, center, center, 0);
+            background-color: $primary-black-color;
+            color: $primary-white-color;
+            border-radius: 0 0.2rem 0.2rem 0;
+            padding: 0.5rem 1rem;
+            box-shadow: 0 0 0.75rem $thirty-black-color;
+            cursor: pointer;
+            margin-top: 2rem;
+            width: 10%;
+            z-index: 10;
 
-            h2{
-                font-size: $ex-small-size-1;
-                text-align: center;
-                margin-bottom: 10px;
-                font-weight: 200;
-            }
-            ul{
-                .social_media{ transition: 200ms ease-in; filter: sepia(100%);}
-                .social_media:hover{ filter: grayscale(0); transition: 200ms ease-out; }
-
-                @include displayMode(flex, none, center, center, 1em);
-                flex-wrap: wrap;
-
-                a{ font-family: 'Asap'; font-size: $ex-small-size-1}
+            &:hover{
+                i{ animation: 800ms ease goingInfite infinite; }
             }
         }
     }
 
+
     iframe{
         // @include lineDiv(blue);
         @extend .heightMax;
-        width: 75%;
     }
 }
 

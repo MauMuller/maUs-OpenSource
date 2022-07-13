@@ -29,3 +29,18 @@
     50%{ width: 100%;}
     100% { width: 0; opacity: 0; z-index: -1;}
 }
+
+@keyframes goingInfite {
+    0%{ transform: translate(10px); }
+    100%{ transform: translate(-10px);  }
+}
+
+@keyframes translateSlimMenu{
+    0%{ transform: translate(0); }
+    100%{ transform: translate(-16rem); }
+}
+
+@keyframes translateDefaultMenu{
+    0%{ transform: translate(-16rem); }
+    100%{ transform: translate(-0.5rem); }
+}
