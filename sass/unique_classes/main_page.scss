@@ -9,7 +9,7 @@
         z-index: 50;
         @include displayMode(flex, column, center, center, 10px);
         // @include lineDiv(green);
-        width: 50%;
+        width: 100%;
 
         .part{
             width: 100%;
@@ -17,48 +17,42 @@
     
         .first_part{
             // @include lineDiv(blue);
-            // text-align: center;
+            text-align: center;
 
             img{
-                width: 80%;
-                max-width: 500px;
-                min-width: 100px;
+                width: 85%;
+                min-width: 15rem;
+                max-width: 25rem;
             }
 
         } 
 
         .last_part{
             // @include lineDiv(blue);
-            @include displayMode(flex, column, flex-start, center, 3em);
+            @include displayMode(flex, column, flex-start, center, 2em);
 
             article{
+                width: 100%;
+                // border: 1px solid green;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+
                 h2{
-                    @include defaultText($primary-black-color, $middle-font-size, 800, transparent);
+                    @include defaultText($primary-black-color, $smaller-font-size, 800, transparent);
                     text-transform: uppercase;
                 }
 
                 h3{
                     @include defaultText($primary-white-color, $ex-small-size-1, 100, $primary-black-color);
                     padding: 8px;
-                    width: 50%;
+                    width: 80%;
                     text-align: center;
                     border-radius: 5px;
+                    // border: 1px solid red;
                 }
             }
-
-            .list_of_items{
-                width: 80%;
-                // @include lineDiv(blue);
-            }
-
-            // .list_of_items::-webkit-scrollbar{
-            //     width: 5px;
-            // }
-
-            // .list_of_items::-webkit-scrollbar-thumb{
-            //     background-color: $secondary-white-color;
-            //     border-radius: 10px;
-            // }
 
             .moreItens{
                 height: 200px;
@@ -66,24 +60,25 @@
                 padding: 10px;
             }
 
-            ul{
+            .list_of_items{
                 // @include lineDiv(blue);
-                @include displayMode(flex, row, center, left, 1.5em);
-                flex-wrap: wrap;
+                @include displayMode(flex, column, center, center, 0.8rem);
                 width: 100%;
 
                 .items{
-                    @include displayMode(flex, none, none, none, 0);
                     // @include lineDiv(red);
-                    padding: 10px;
-                    width: 45%;
+                    display: flex;
+                    justify-content: center;
+                    width: 100%;
 
                     a{
-                        width: 100%;
+                        // border: 1px solid green;
+                        width: 80%;
                         font-family: 'Asap';
-                        @include defaultText($primary-white-color, $smallest-font-size, 100, $primary-black-color);
-                        border-radius: 20px;
-                        padding: 10px;
+                        border-radius: 0.5rem;
+                        text-align: center;
+                        font-size: $ex-small-size-1;
+                        padding: 0.5rem;
                         cursor: pointer;
                         transition: 500ms ease;
                         z-index: 60;
@@ -108,11 +103,28 @@
 
             .footer_main{
                 // @include lineDiv(yellow);
-                @include displayMode(flex, column, center, left, 1em);
+                width: 100%;
+                @include displayMode(flex, column, center, center, 1em);
                 font-weight: 600;
+                padding: 0.5rem;
 
-                span{ @include defaultText($secondary-red-color, $ex-small-size-1, 800, transparent); }
-                ul a{ @include defaultText($primary-black-color, $smallest-font-size, 100, transparent); }
+                .copy_text{
+                    // border: 1px solid blue;
+                    text-align: center;
+
+                    span{ 
+                        @include defaultText($secondary-red-color, $ex-small-size-1, 800, transparent); 
+                    }
+                }
+
+                .social_container{
+                    // border: 1px solid blue;
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    gap: 0.5rem;
+                    a{ @include defaultText($primary-black-color, $smallest-font-size, 100, transparent); }
+                }
             }
         }
     }

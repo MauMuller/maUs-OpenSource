@@ -17,6 +17,6 @@ assuntos.adicionarAssunto();
 assuntos.adicionarLogo('../img/Tools.svg', 1);
 	
 assuntos.adicionarAnchors([
-    {href: './iframes/tools/', icon:'\&#9829', text: 'CPF Functions'},
+    {href: './iframes/tools/', icon:'😀', text: 'CPF Functions'},
     {href: './iframes/tools/aaa', icon:'', text: 'teste2'}
 ], 1);
