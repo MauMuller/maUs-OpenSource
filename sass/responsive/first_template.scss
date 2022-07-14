@@ -1,0 +1,9 @@
+@media (min-width: 530px){
+    .text_template{
+        gap: 1.5rem;
+        padding: 2rem;
+        font-size: $smallest-font-size;
+
+        .title_template{ font-size: $small-font-size; }
+    }
+}

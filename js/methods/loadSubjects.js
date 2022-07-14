@@ -24,7 +24,6 @@ function settingLogotype(srcLogo){
 
 function settingAnchorList(arrAnchor){
     arrAnchor.forEach(objLink=>{
-        console.log(objLink.icon);
         navegationList.innerHTML += `<li><a href="${objLink.href}" class="anchorsSubject" title="${objLink.text}">${objLink.icon} ${objLink.text}</a></li>`;
     });
 }

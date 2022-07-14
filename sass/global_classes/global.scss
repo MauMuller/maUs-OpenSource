@@ -1,4 +1,4 @@
-*{margin: 0; padding: 0; box-sizing: border-box; list-style: none;};
+*{margin: 0; padding: 0; box-sizing: border-box; }
 
 *::-webkit-scrollbar{
     width: 5px;
@@ -9,9 +9,11 @@
     border-radius: 10px;
 }
 
+.overflow-y-auto{ overflow-y: visible; }
 .hidden_element{ opacity: 0; visibility: hidden;}
 .visible_element{ opacity: 1; visibility: visible;}
 
+.disabled_element{display: none !important; }
 
 .flexbox_container{
     // @include lineDiv(red);
