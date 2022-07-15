@@ -1,5 +1,4 @@
-#leftbar_menu_container{
-    // @include lineDiv(red);
+.leftbar_menu_container{
     @include displayMode(flex, row, center, flex-start, 1px);
     @include positionDiv(fixed, 0, 0, 0, 0);
     user-select: none;
@@ -170,6 +169,7 @@
                     font-weight: 200;
                 }
                 ul{
+                    list-style: none;
                     .social_media{ transition: 200ms ease-in; filter: sepia(100%);}
                     .social_media:hover{ filter: grayscale(0); transition: 200ms ease-out; }
     

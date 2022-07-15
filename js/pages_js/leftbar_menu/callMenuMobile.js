@@ -3,6 +3,7 @@
     const menu_links = document.querySelector('div.default_menu');
     const iframeMenu = document.querySelector('iframe.iframe_menubar');
     const anchors_menu_functions = document.querySelectorAll('a.anchorsSubject');
+    const logo = document.querySelector('section.first_section_leftbar a');
 
     const addingIframe = ()=>{ iframeMenu.classList.remove('disabled_element'); };
     const removingIframe = ()=>{ iframeMenu.classList.add('disabled_element'); };
@@ -23,6 +24,11 @@
                     break;
             }
         });
+    });
+
+    logo.addEventListener('click',()=>{
+        addingIframe();
+        removingMenuLink();
     });
 
     anchors_menu_functions.forEach(anchor=>{
