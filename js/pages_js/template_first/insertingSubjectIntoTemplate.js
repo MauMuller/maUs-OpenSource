@@ -6,7 +6,7 @@
     if(gettingSubjectData !== null){
         const objValues = JSON.parse(gettingSubjectData);
         
-        console.log({color_text:color_text, back:objValues.background})
+        // console.log({color_text:color_text, back:objValues.background})
         title_inset.forEach(title=>title.innerHTML = objValues.text);
         color_text.forEach(color_text=>color_text.style.color = objValues.background);
     }

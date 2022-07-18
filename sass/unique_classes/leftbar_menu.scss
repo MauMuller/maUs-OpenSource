@@ -233,3 +233,22 @@
         }
     }
 }
+
+
+.search_contact_fullwindow{
+    position: absolute;
+    z-index: 20;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $fourty-black-color;
+
+    .search_container{
+        border: 1px solid red;
+        width: 100%;
+        padding: 1rem;
+
+        
+    }
+}

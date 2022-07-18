@@ -18,7 +18,7 @@
                     addingMenuLink();
                     removingIframe();
                     break;
-                case 1: //CONTATO COMIGO
+                case 1: //FALE COMIGO
                     removingMenuLink();
                     removingIframe();
                     break;
@@ -26,7 +26,7 @@
         });
     });
 
-    logo.addEventListener('click',()=>{
+    logo.addEventListener('click',()=>{ //MOSTRAR PÁGINA PRINCIPAL
         addingIframe();
         removingMenuLink();
     });
