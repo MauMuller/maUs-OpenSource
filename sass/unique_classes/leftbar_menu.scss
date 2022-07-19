@@ -246,7 +246,6 @@
 
 .search_container{
     @extend .background_fullwindow;
-    visibility: hidden;
 
     .centralization_search_container{
         z-index: 30;

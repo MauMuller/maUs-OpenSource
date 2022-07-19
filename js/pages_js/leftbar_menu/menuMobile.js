@@ -18,9 +18,9 @@
                     addingMenuLink();
                     removingIframe();
                     break;
-                case 1: //FALE COMIGO
-                    removingMenuLink();
-                    removingIframe();
+                case 1: case 2: //FALE COMIGO
+                    addingIframe();
+                    removingMenuLink(); 
                     break;
             }
         });
