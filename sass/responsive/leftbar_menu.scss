@@ -1,3 +1,30 @@
+@media (max-height: 585px){
+    .search_container{
+        align-items: flex-start;
+    }
+}
+
+@media (min-width: 400px){
+    .search_container .centralization_search_container{
+        align-items: center;
+
+        .close_search_container,
+        .input_search_container,
+        .list_anchors_search_container{
+            width: 80%;
+        }
+
+        .title_search_container{
+            text-align: center;
+            width: 25rem;
+    
+            h1{
+                font-size: $smaller-font-size;
+            }
+        } 
+    } 
+}
+
 @media (min-width: 800px){
     .leftbar_menu_container{
         .container_itens{
@@ -33,11 +60,26 @@
         visibility: visible;
         // width: 12%;
     }
-
     .menu_mobile_footer{
         display: none;
     }
+
+    .search_container .centralization_search_container .input_search_container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .fieldset_search{
+            width: 30rem;
     
+            legend{
+                margin-left: 1.5rem;
+            }
+
+            .icon_search{ width: 5%; }
+            .search_input{ width: 85%; }
+        }
+    } 
 }
 
 @media (min-width: 1100px){
@@ -50,4 +92,49 @@
             width: 75%;
         }
     }
+
+    .search_container .centralization_search_container{
+
+        .close_search_container,
+        .input_search_container,
+        .list_anchors_search_container{
+            width: 55rem;
+        }
+    } 
+}
+
+@media (min-width: 1600px){
+    
+    .search_container .centralization_search_container{
+        .keyBtn{ font-size: 1.3rem; }
+        .title_search_container h1{ font-size: $middle-font-size; }
+
+        .input_search_container{
+            .fieldset_search{
+                width: 80%;
+                padding-bottom: 6px;
+
+                legend .img_search{
+                    width: 8rem;
+                }
+                .close_icon{ 
+                    font-size: 1.3rem;
+                    text-align: center;
+                }
+                .search_icon{ 
+                    font-size: 1.5rem;
+                    text-align: center;
+                }
+                .search_input{
+                    font-size: 1.2rem;
+                }
+            }
+        }
+
+        .list_anchors_search_container .list_container .anchor_list{
+            font-size: 1.3rem;
+
+            i{ font-size: $small-font-size; }
+        }
+    } 
 }

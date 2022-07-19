@@ -234,37 +234,22 @@
     }
 }
 
-.search_contact_fullwindow{
+.background_fullwindow{
     overflow-y: auto;
     position: absolute;
-    z-index: 20;
     inset: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: $fourty-black-color;
+}
 
-    .keyBtn{
-        border-radius: 0.4rem;
-        padding: 0.3rem;
-        padding-right: 0.8rem;
-        padding-left: 0.8rem;
-        font-family: 'Asap';
-        color: $primary-black-color;
-        font-size: 0.8rem;
-        font-weight: 500;
-        background-color: $secondary-white-color;
-        box-shadow: 2px 2px 3px $thirty-white-color;
-        user-select: none;
+.search_container{
+    @extend .background_fullwindow;
+    visibility: hidden;
 
-        &:active{ box-shadow: -2px -2px 3px $thirty-white-color; }
-        &:hover{
-            color: $primary-white-color;
-            background-color: $primary-black-color;
-        }
-    }
-
-    .search_container{
+    .centralization_search_container{
+        z-index: 30;
         padding: 0.3rem;
         width: 100%;
         display: flex;
@@ -272,10 +257,31 @@
         gap: 1.5rem;
         // border: 1px solid red;
 
+        .keyBtn{
+            border-radius: 0.4rem;
+            padding: 0.3rem;
+            padding-right: 0.8rem;
+            padding-left: 0.8rem;
+            font-family: 'Asap';
+            color: $primary-black-color;
+            font-size: 0.8rem;
+            font-weight: 500;
+            background-color: $secondary-white-color;
+            box-shadow: 2px 2px 3px $thirty-white-color;
+            user-select: none;
+
+            &:active{ box-shadow: -2px -2px 3px $thirty-white-color; }
+            &:hover{
+                color: $primary-white-color;
+                background-color: $primary-black-color;
+            }
+        }
+
         .close_search_container{
             // border: 1px solid red;
             display: flex;
             justify-content: flex-end;
+            cursor: pointer;
         }
 
         .title_search_container{
@@ -308,16 +314,26 @@
 
                 .icon_search{
                     color: $primary-white-color;
-                    font-size: 1.2rem;
-                    text-align: right;
-                    width: 15%;
+                    width: 10%;
+                    // text-align: center;  
                     // border: 1px solid red;
                 }
 
+                .search_icon{ 
+                    @extend .icon_search; 
+                    font-size: 1.2rem;
+                    text-align: right;  
+                }
+                .close_icon{ 
+                    @extend .icon_search; 
+                    font-size: 1rem;
+                    text-align: left;
+                    cursor: pointer;
+                }
+
                 .search_input{
-                    // border: 1px solid red;
                     padding: 10px;
-                    width: 95%;
+                    width: 80%;
                     padding-top: 8px;
                     color: $primary-white-color;
                     background-color: transparent;
@@ -325,8 +341,8 @@
                     outline: 1px solid transparent;
                 }
 
-                .atalhos_iput_search{
-                    border: 1px solid red;
+                .atalhos_input_search{
+                    // border: 1px solid red;
                     display: none;
                     flex-direction: row;
 
@@ -337,7 +353,7 @@
             }
         }
 
-        .list_acnhors_search_container{
+        .list_anchors_search_container{
             // border: 1px solid blue;
             background-color: $primary-black-color;
             box-shadow: 2px 2px 2px $secondary-red-color;
@@ -347,6 +363,11 @@
             .list_container{
                 list-style: none;
                 height: 20rem;
+                overflow-y: auto;
+                gap: 0.8rem;
+                display: flex;
+                flex-direction: column;
+                width: 100%;
                 
                 .anchor_list{
                     border-radius: 4px;
@@ -356,7 +377,14 @@
                     padding: 0.5rem;
                     font-size: $ex-small-size-1;
                     font-weight: 500;
+                    display: flex;
+                    flex-direction: row;
+                    cursor: pointer;
+                    align-items: center;
+                    justify-content: space-between;
                     font-family: 'Asap';
+
+                    i { font-size: $smallest-font-size; }
                 }
 
             }
