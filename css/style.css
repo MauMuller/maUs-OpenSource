@@ -505,9 +505,6 @@
   background-color: rgba(24, 22, 22, 0.9529411765);
 }
 
-.search_container {
-  visibility: hidden;
-}
 .search_container .centralization_search_container {
   z-index: 30;
   padding: 0.3rem;
