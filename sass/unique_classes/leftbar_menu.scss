@@ -386,7 +386,11 @@
                     i { font-size: $smallest-font-size; }
 
                     &:hover{
-                        i { animation: 1s  }
+                        i { animation: 1s infiniteArrow ease infinite }
+                    }
+
+                    &:active{
+                        // box-shadow: ;
                     }
                 }
 

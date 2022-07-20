@@ -44,3 +44,8 @@
     0%{ transform: translate(-16rem); }
     100%{ transform: translate(-0.5rem); }
 }
+
+@keyframes infiniteArrow{
+    0% { transform: translate(0); }
+    100% { transform: translate(1rem); }
+}
