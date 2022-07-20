@@ -384,6 +384,10 @@
                     font-family: 'Asap';
 
                     i { font-size: $smallest-font-size; }
+
+                    &:hover{
+                        i { animation: 1s  }
+                    }
                 }
 
             }
