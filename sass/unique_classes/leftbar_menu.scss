@@ -301,7 +301,7 @@
                 display: flex;
                 flex-direction: row;
                 border: none;
-                justify-content: center;
+                justify-content: flex-start;
                 align-items: center;
                 padding-bottom: 4px;
 
@@ -313,26 +313,23 @@
 
                 .icon_search{
                     color: $primary-white-color;
-                    width: 10%;
-                    // text-align: center;  
-                    // border: 1px solid red;
                 }
 
                 .search_icon{ 
                     @extend .icon_search; 
-                    font-size: 1.2rem;
-                    text-align: right;  
+                    font-size: 1.2rem;  
+                    margin-left: 1rem
                 }
                 .close_icon{ 
                     @extend .icon_search; 
                     font-size: 1rem;
-                    text-align: left;
+                    margin-right: 1rem;
                     cursor: pointer;
                 }
 
                 .search_input{
                     padding: 10px;
-                    width: 80%;
+                    width: 100%;
                     padding-top: 8px;
                     color: $primary-white-color;
                     background-color: transparent;
@@ -343,6 +340,7 @@
                 .atalhos_input_search{
                     // border: 1px solid red;
                     display: none;
+                    pointer-events: none;
                     flex-direction: row;
 
                     .keys_input{
@@ -363,12 +361,15 @@
                 list-style: none;
                 height: 20rem;
                 overflow-y: auto;
+                overflow-x: hidden;
                 gap: 0.8rem;
                 display: flex;
+                align-items: center;
                 flex-direction: column;
                 width: 100%;
                 
                 .anchor_list{
+                    width: 80%;
                     border-radius: 4px;
                     background-color: $thirty-black-color;
                     box-shadow: 2px 2px 3px $secondary-black-color;
@@ -383,10 +384,15 @@
                     justify-content: space-between;
                     font-family: 'Asap';
 
+                    p { overflow-x: auto; }
                     i { font-size: $smallest-font-size; }
 
                     &:hover{
-                        i { animation: 1s infiniteArrow ease infinite }
+                        i { animation: 500ms infiniteArrow ease forwards }
+                        // transform: scale(1.02);
+                        background-color: $secondary-black-color;
+                        transition: 500ms ease;
+                        // box-shadow: none;
                     }
 
                     &:active{
