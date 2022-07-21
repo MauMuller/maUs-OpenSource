@@ -4,7 +4,8 @@
         document.querySelectorAll('ul.list_buttons li')[2],
     ];
     const container_search = document.querySelector('section.search_container'),
-          close_btn = document.querySelector('span.close_btn');
+          close_btn = document.querySelector('span.close_btn'),
+          iframe = document.querySelector('iframe.iframe_menubar');
 
     let boolCtrlP=false;
 
@@ -20,6 +21,18 @@
         }
     };
 
+    const searchingModalKeyboard = (keyCode, innerWidth) => {
+        if(innerWidth >= 800){
+            if(boolCtrlP===true){
+                if(keyCode===75){ openSearch(); } //ABRIR
+                boolCtrlP=false;
+            }
+    
+            if(keyCode===16){ boolCtrlP=true }
+            if(keyCode===27) { closeSearch(); } //FECHAR
+        }
+    };
+
     searchMenus.forEach(btnSearch=>{ 
         btnSearch.addEventListener('click', ()=>{ //ABRIR TELA;
             openSearch();
@@ -32,14 +45,15 @@
 
     //ATALHOS PARA PESQUISA - ABRIR | FECHAR
     window.addEventListener('keydown', (evt)=>{
-        if(window.innerWidth >= 800){
-            if(boolCtrlP===true){
-                if(evt.keyCode===75){ openSearch(); } //ABRIR
-                boolCtrlP=false;
-            } 
-    
-            if(evt.keyCode===17){ boolCtrlP=true }
-            if(evt.keyCode===27) { closeSearch(); } //FECHAR
-        }
+        searchingModalKeyboard(evt.keyCode, window.innerWidth);
     });
+
+    //TEMPLO ASSINCRONO PARA PEGAR A APLICAÇÃO NO IFRAME
+    setTimeout(()=>{
+        const documentIframe = iframe.contentWindow.document.body;
+
+        documentIframe.addEventListener('keydown', (evt)=>{
+            searchingModalKeyboard(evt.keyCode, window.innerWidth);
+        });
+    }, 100);
 }
