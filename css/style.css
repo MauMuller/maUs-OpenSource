@@ -491,7 +491,7 @@
 }
 .menu_mobile_footer .box_icon i {
   color: #ffffff;
-  font-size: 1.2rem;
+  font-size: 0.8rem;
 }
 
 .background_fullwindow, .search_container {
@@ -970,11 +970,16 @@
     font-size: 2.5rem;
   }
 }
+@media (max-height: 500px) {
+  .iframe_menubar {
+    margin-bottom: 5rem;
+  }
+}
 @media (min-width: 480px) {
   .container_template .text_template {
     gap: 1.5rem;
     padding: 2rem;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
   .container_template .text_template .title_template {
     font-size: 2.5rem;

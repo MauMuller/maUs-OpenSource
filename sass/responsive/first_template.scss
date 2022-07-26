@@ -1,9 +1,15 @@
+@media (max-height: 500px){
+    .iframe_menubar{
+        margin-bottom: 5rem;
+    }
+}
+
 @media (min-width: 480px){
     .container_template{
         .text_template{
             gap: 1.5rem;
             padding: 2rem;
-            font-size: $smallest-font-size;
+            font-size: 1.2rem;
 
             .title_template{ font-size: $small-font-size; }
         }
