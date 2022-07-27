@@ -151,6 +151,7 @@
     padding: 10px;
 
     .menu_button{
+        list-style: none;
         @include displayMode(flex, column, flex-end, center, 5px);
         // @include lineDiv(red);
         width: 65px;
@@ -240,6 +241,9 @@
     justify-content: center;
     align-items: center;
     background-color: $fourty-black-color;
+
+    &::-webkit-scrollbar{ width: 1px; }
+    &::-webkit-scrollbar-thumb{ background-color: transparent }
 }
 
 .search_container{
@@ -392,10 +396,6 @@
                         transition: 500ms ease;
                         // box-shadow: none;
                     }
-
-                    &:active{
-                        // box-shadow: ;
-                    }
                 }
 
             }
@@ -418,7 +418,7 @@
 
         .box_close{
             width: 80%;
-            text-align: end;
+            text-align: center;
             color: $primary-white-color;
             font-size: $small-font-size;
             cursor: pointer;
@@ -430,12 +430,13 @@
             width: 80%;
             display: flex;
             flex-direction: column;
+            align-items: center;
             gap: 3rem;
 
             .title_close{
                 // border-bottom: 2px solid $primary-white-color;
                 color: $primary-white-color;
-                font-size: $big-font-size;
+                font-size: $middle-font-size;
                 font-weight: 800;
                 word-spacing: 1rem;
                 font-family: Arial, Helvetica, sans-serif;
@@ -450,13 +451,15 @@
                     // border: 1px solid red;
                     display: flex;
                     flex-direction: column;
+                    align-items: center;
                     gap: 10px;
 
                     .subtitle_close{
+                        text-align: center;
                         text-transform: uppercase;
                         color: $primary-white-color;
                         text-shadow: 2px 2px 5px #000;
-                        font-size: $smaller-font-size;
+                        font-size: $smallest-font-size;
                         font-weight: 800;
                         font-family: Arial, Helvetica, sans-serif;
                     }
@@ -464,13 +467,15 @@
                     article{
                         display: flex;
                         flex-direction: column;
+                        align-items: center;
                         gap: 2rem;
 
                         p{
+                            text-align: justify;
                             color: $secondary-white-color;
                             font-weight: 700;
                             font-family: Arial, Helvetica, sans-serif;
-                            font-size: 1.5rem;
+                            font-size: $ex-small-size-1;
                             // line-height: 2rem;
                         }
 
@@ -484,6 +489,7 @@
                             div{
                                 display: flex;
                                 flex-direction: row;
+                                justify-content: center;
                                 gap: 1rem;
 
                                 li{
@@ -492,6 +498,12 @@
                                     font-size: $smallest-font-size;
                                 }
                             }
+                        }
+
+                        .lineLink{
+                            display: flex;
+                            align-items: center;
+                            font-weight: 600;
                         }
                     }
                 }

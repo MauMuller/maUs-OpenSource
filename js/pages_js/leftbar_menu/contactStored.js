@@ -1,6 +1,7 @@
 {
     const subtitles = document.querySelectorAll('h2.subtitle_close'),
           medias = document.querySelectorAll('a.midias_contact_icons'),
+          lineLink = document.querySelector('p.lineLink'),
           colorToPutIntoContact = JSON.parse(localStorage.getItem('subjectObj')).background;
 
     const settingColorIntoTitles = () => {
@@ -24,6 +25,12 @@
         })
     };
 
+    const settingColorIntoEmailLink = () => {
+        lineLink.style.borderBottom = `1px solid${colorToPutIntoContact}`;
+        lineLink.children[0].style.color = colorToPutIntoContact;
+    };
+
+    settingColorIntoEmailLink();
     settingColorIntoTitles();
     hoverOnMedias();
 }
