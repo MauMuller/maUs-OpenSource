@@ -402,3 +402,100 @@
         }
     }
 }
+
+.contact_container{
+    @extend .background_fullwindow;
+    align-items: flex-start;
+    
+    .centralization_contact_container{
+        // border: 1px solid red;
+        width: 60rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow-y: auto;
+        padding: 1rem;
+
+        .box_close{
+            width: 80%;
+            text-align: end;
+            color: $primary-white-color;
+            font-size: $small-font-size;
+            cursor: pointer;
+
+            i:hover{ color: $primary-red-color; }
+        }
+
+        .box_article{
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+
+            .title_close{
+                // border-bottom: 2px solid $primary-white-color;
+                color: $primary-white-color;
+                font-size: $big-font-size;
+                font-weight: 800;
+                word-spacing: 1rem;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            .container_sections{
+                display: flex;
+                flex-direction: column;
+                gap: 5rem;
+
+                .section_close{
+                    // border: 1px solid red;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+
+                    .subtitle_close{
+                        text-transform: uppercase;
+                        color: $primary-white-color;
+                        text-shadow: 2px 2px 5px #000;
+                        font-size: $smaller-font-size;
+                        font-weight: 800;
+                        font-family: Arial, Helvetica, sans-serif;
+                    }
+
+                    article{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 2rem;
+
+                        p{
+                            color: $secondary-white-color;
+                            font-weight: 700;
+                            font-family: Arial, Helvetica, sans-serif;
+                            font-size: 1.5rem;
+                            // line-height: 2rem;
+                        }
+
+                        .midias_contact{
+                            // border: 1px solid red;
+                            display: flex;
+                            flex-direction: column;
+                            gap: 5px;
+                            list-style: none;
+
+                            div{
+                                display: flex;
+                                flex-direction: row;
+                                gap: 1rem;
+
+                                li{
+                                    color: $primary-white-color;
+                                    font-family: Arial, Helvetica, sans-serif;
+                                    font-size: $smallest-font-size;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

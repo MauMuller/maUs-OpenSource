@@ -4,6 +4,7 @@
         document.querySelectorAll('ul.list_buttons li')[2],
     ];
     const container_search = document.querySelector('section.search_container'),
+          container_contact = document.querySelector('section.contact_container'),
           close_btn = document.querySelector('span.close_btn'),
           iframe = document.querySelector('iframe.iframe_menubar');
 
@@ -22,7 +23,7 @@
     };
 
     const searchingModalKeyboard = (keyCode, innerWidth) => {
-        if(innerWidth >= 800){
+        if(innerWidth >= 800 && container_contact.classList.contains('hidden_element')){
             if(boolCtrlP===true){
                 if(keyCode===75){ openSearch(); } //ABRIR
                 boolCtrlP=false;
