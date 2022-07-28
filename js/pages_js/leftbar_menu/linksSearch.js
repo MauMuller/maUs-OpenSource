@@ -6,7 +6,7 @@
         let anchor_list = document.querySelectorAll('a.anchor_list');
 
         anchor_list.forEach(anchor=>{
-            console.log(anchor.innerText.toUpperCase());
+            // console.log(anchor.innerText.toUpperCase());
             anchor.style.display = anchor.innerText.toUpperCase().includes(input_search.value.toUpperCase()) ? "flex" : "none";
         });
     };
