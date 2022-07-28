@@ -6,7 +6,8 @@
         let anchor_list = document.querySelectorAll('a.anchor_list');
 
         anchor_list.forEach(anchor=>{
-            anchor.style.display = anchor.innerText.includes(input_search.value) ? "flex" : "none";
+            console.log(anchor.innerText.toUpperCase());
+            anchor.style.display = anchor.innerText.toUpperCase().includes(input_search.value.toUpperCase()) ? "flex" : "none";
         });
     };
 
