@@ -1,3 +1,10 @@
+@media (max-height: 500px){
+    #main_page{
+        justify-content: flex-start;
+        padding: 1rem 0 1rem 0;
+    }
+}
+
 @media (min-width: 500px){
     #main_page .box_part .last_part{
         article{
