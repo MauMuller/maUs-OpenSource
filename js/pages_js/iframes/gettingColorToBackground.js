@@ -1,14 +1,6 @@
 {
-    const subject = JSON.parse(localStorage.getItem('subjectObj')).title,
+    const backgroundColor = JSON.parse(localStorage.getItem('subjectObj')).background,
           body = document.querySelector('body');
 
-    switch(parseInt(subject)){
-        case 0:
-            body.style.background = "#FFF1F1";
-            break;
-        case 1:
-            body.style.background = "#F2F1FF";
-            break;
-    }
-
+    body.style.background = `${backgroundColor}1a`;
 }
