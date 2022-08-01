@@ -888,6 +888,7 @@
   flex-direction: row;
   gap: 10px;
   justify-content: flex-start;
+  padding: 10px 0 10px 0;
   align-items: center;
 }
 .container_iframes .container_iframe_overview .code_iframe_box .painel_code .list_tech::-webkit-scrollbar {
@@ -899,10 +900,6 @@
 .container_iframes .container_iframe_overview .code_iframe_box .painel_code .list_tech .btn_default {
   background-color: #000000;
   box-shadow: 5px 5px 6px #262626;
-}
-.container_iframes .container_iframe_overview .code_iframe_box .painel_code .list_tech .btn_actived {
-  background-color: #D73D3D;
-  box-shadow: 4px 4px 5px #8C2222;
 }
 .container_iframes .container_iframe_overview .code_iframe_box .painel_code .list_tech .btn_tech {
   display: flex;
@@ -947,6 +944,15 @@
 .container_iframes .container_iframe_overview .code_iframe_box .painel_code .editor_code .files_by_tech .files_list::-webkit-scrollbar-thumb {
   background-color: transparent;
 }
+.container_iframes .container_iframe_overview .code_iframe_box .painel_code .editor_code .files_by_tech .files_list .html_color {
+  color: #fd9e75;
+}
+.container_iframes .container_iframe_overview .code_iframe_box .painel_code .editor_code .files_by_tech .files_list .css_color {
+  color: #6390f7;
+}
+.container_iframes .container_iframe_overview .code_iframe_box .painel_code .editor_code .files_by_tech .files_list .js_color {
+  color: #f1e17a;
+}
 .container_iframes .container_iframe_overview .code_iframe_box .painel_code .editor_code .files_by_tech .files_list .default_item {
   background: #262626;
 }
@@ -961,7 +967,6 @@
   padding: 10px;
   height: 100%;
   gap: 10px;
-  color: #ffffff;
 }
 .container_iframes .container_iframe_overview .code_iframe_box .painel_code .editor_code .files_by_tech .files_list .file_item i {
   font-size: 1.5rem;
@@ -969,22 +974,55 @@
 .container_iframes .container_iframe_overview .code_iframe_box .painel_code .editor_code .files_by_tech .files_list .file_item p {
   font-size: 1rem;
 }
-.container_iframes .container_iframe_overview .code_iframe_box .painel_code .editor_code .text_for_code {
+.container_iframes .container_iframe_overview .code_iframe_box .painel_code .editor_code .code_html {
   color: white;
   padding: 10px 10px 10px 1rem;
   list-style: none;
   display: flex;
   flex-direction: column;
   gap: 5px;
+  overflow-x: auto;
+  width: 100%;
 }
-.container_iframes .container_iframe_overview .code_iframe_box .painel_code .editor_code .text_for_code .line_code {
+.container_iframes .container_iframe_overview .code_iframe_box .painel_code .editor_code .code_html::-webkit-scrollbar {
+  width: 1px;
+}
+.container_iframes .container_iframe_overview .code_iframe_box .painel_code .editor_code .code_html::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+.container_iframes .container_iframe_overview .code_iframe_box .painel_code .editor_code .code_html .line_code {
   display: flex;
   font-size: 1rem;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 2rem;
 }
-.container_iframes .container_iframe_overview .code_iframe_box .painel_code .editor_code .text_for_code .line_code .code_container {
+.container_iframes .container_iframe_overview .code_iframe_box .painel_code .editor_code .code_html .line_code .number_code {
+  user-select: none;
+}
+.container_iframes .container_iframe_overview .code_iframe_box .painel_code .editor_code .code_html .line_code .code_container {
   width: 90%;
-  border: 1px solid blue;
+  flex-direction: row;
+  display: flex;
+  font-weight: 700;
+}
+.container_iframes .container_iframe_overview .code_iframe_box .painel_code .editor_code .code_html .line_code .code_container .tagsNameHTML {
+  color: #D73D3D;
+}
+.container_iframes .container_iframe_overview .code_iframe_box .painel_code .editor_code .code_html .line_code .code_container .tagsCharHTML {
+  color: rgba(190, 190, 190, 0.5568627451);
+}
+.container_iframes .container_iframe_overview .code_iframe_box .painel_code .editor_code .code_html .line_code .code_container .tagsClass {
+  color: #A89898;
+}
+.container_iframes .container_iframe_overview .code_iframe_box .painel_code .editor_code .code_html .line_code .code_container .tagsClass::before {
+  content: "";
+  padding: 2px;
+}
+.container_iframes .container_iframe_overview .code_iframe_box .painel_code .editor_code .code_html .line_code .code_container .className {
+  color: #8C2222;
+}
+.container_iframes .container_iframe_overview .code_iframe_box .painel_code .editor_code .code_html .line_code .code_container .texts {
+  color: #ffffff;
 }
 
 @keyframes goNext {

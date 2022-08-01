@@ -116,6 +116,7 @@
                 gap: 1rem;
 
                 .list_tech{
+                    // border: 1px solid blue;
                     width: 100%;
                     list-style: none;
                     overflow-x: auto;
@@ -123,6 +124,7 @@
                     flex-direction: row;
                     gap: 10px;
                     justify-content: flex-start;
+                    padding: 10px 0 10px 0;
                     align-items: center;
 
                     &::-webkit-scrollbar{ width: 1px; }
@@ -133,10 +135,10 @@
                         box-shadow: 5px 5px 6px $primary-black-color;
                     }
 
-                    .btn_actived{
-                        background-color: $fourty-red-color;
-                        box-shadow: 4px 4px 5px $secondary-red-color;
-                    }
+                    // .btn_actived{
+                    //     background-color: $fourty-red-color;
+                    //     box-shadow: 4px 4px 5px $secondary-red-color;
+                    // }
 
                     .btn_tech{
                         display: flex;
@@ -181,6 +183,10 @@
                             &::-webkit-scrollbar{ width: 1px; }
                             &::-webkit-scrollbar-thumb{ background-color: transparent; }
 
+                            .html_color{ color: #fd9e75}
+                            .css_color{ color: #6390f7}
+                            .js_color{ color: #f1e17a}
+
                             .default_item{
                                 background: $primary-black-color;
                             }
@@ -197,7 +203,7 @@
                                 padding: 10px;
                                 height: 100%;
                                 gap: 10px;
-                                color: $primary-white-color;
+                                // color: $primary-white-color;
 
                                 i{ font-size: $smallest-font-size; }
                                 p{ font-size: $ex-small-size-1; }
@@ -206,7 +212,7 @@
 
                     }
 
-                    .text_for_code{
+                    .code_html{
                         // border: 1px solid red;
                         color: white;
                         padding: 10px 10px 10px 1rem;
@@ -214,19 +220,60 @@
                         display: flex;
                         flex-direction: column;
                         gap: 5px;
+                        overflow-x: auto;
+                        width: 100%;
+
+                        &::-webkit-scrollbar{ width: 1px; }
+                        &::-webkit-scrollbar-thumb{ background-color: transparent; }
 
                         .line_code{
                             // border: 1px solid red;
                             display: flex;
                             font-size: $ex-small-size-1;
-                            justify-content: space-between;
+                            justify-content: flex-start;
+                            gap: 2rem;
+
+                            .number_code{
+                                user-select: none;
+                            }
 
                             .code_container{
                                 width: 90%;
-                                border: 1px solid blue;
+                                flex-direction: row;
+                                display: flex;
+                                font-weight: 700;
+                                // border: 1px solid blue;
+
+                                .tagsNameHTML{
+                                    color: $fourty-red-color;
+                                }
+
+                                .tagsCharHTML{
+                                    color: $thirty-white-color;
+                                }
+
+                                .tagsClass{
+                                    color: $fourty-white-color;
+
+                                    &::before{
+                                        content: "";
+                                        padding: 2px;
+                                    }
+                                }
+
+                                .className{
+                                    color: $secondary-red-color;
+                                }
+
+                                .texts{
+                                    color: $primary-white-color;
+                                }
                             }
                         }
                     }
+
+
+
                 }
             }
         }
